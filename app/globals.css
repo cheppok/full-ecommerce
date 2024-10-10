@@ -2,26 +2,165 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body{
+ background: #FFFFFF; ;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+input:focus {
+  outline: none;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+
+.loginPage{
+/* width: 1440px; */
+/* height: 1561px; */
+width: 100vw;
+height: 100vh;
+
+left: 3040px;
+gap: 0px;
+opacity: 0px;
+background: #FFFFFF;
+
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.loginMain {
+width: Hug 1,305px;
+height: Hug 781px;
+top: 200px;
+gap: 129px;
+opacity: 0px;
+
 }
+
+
+
+.loginImage {
+ width: 805px;
+height: 781px;
+padding: 75px 0px 0px 0px;
+gap: 0px;
+border-radius: 0px 4px 4px 0px;
+opacity: 0px;
+}
+
+.loginForm{
+width: 371px;
+height: 326px;
+gap: 40px;
+opacity: 0px;
+
+}
+
+.forgetPassword{
+
+  width: 141px;
+  height: 24px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  
+  color: #DB4444;
+  
+}
+
+.loginButton{
+ width:  143px;
+height:  56pxpx;
+padding: 16px 48px 16px 48px;
+gap: 10px;
+border-radius: 4px 0px 0px 0px;
+opacity: 0px;
+
+
+background: #DB4444;
+
+}
+
+.footer{
+/* width: 1440px; */
+width: 100vw;
+height: 440px;
+top: 1121px;
+padding: 80px 0px 24px 0px;
+gap: 0px;
+opacity: 0px;
+
+background: #000000;
+
+}
+
+.enterMail{
+  /* width: 130px; */
+/* width: 100%; */
+/* height: 32px; */
+/* height: 100%; */
+gap: 0px;
+opacity: 0.4px;
+
+font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+
+
+/* background: #FAFAFA; */
+}
+
+
+.currentPage {
+  border-bottom: solid 2px green;
+  /* text-decoration: underline; */
+}
+
+.contactSection1{
+width: 340px;
+height: 457px;
+top: 323px;
+left: 135px;
+padding: 40px 35px 51px 35px;
+gap: 0px;
+border-radius: 4px 0px 0px 0px;
+opacity: 0px;
+
+background: #FFFFFF;
+box-shadow: 0px 1px 13px 0px #0000000D;
+
+}
+
+.contactSection2{
+ width: 800px;
+height: 457px;
+top: 323px;
+left: 505px;
+padding: 40px 32px 40px 31px;
+gap: 0px;
+border-radius: 4px 0px 0px 0px;
+opacity: 0px;
+
+background: #FFFFFF;
+
+box-shadow: 0px 1px 13px 0px #0000000D;
+
+}
+
+
+/* .sendIcon{
+ 
+width: 20px;
+height: 18px;
+top: 3px;
+left: 2px;
+gap: 0px;
+border: 1.5px 0px 0px 0px;
+opacity: 0px;
+
+
+border: 1.5px solid #FAFAFA
+} */

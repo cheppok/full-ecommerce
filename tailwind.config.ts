@@ -11,9 +11,16 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customWhite: '#FFFFFF', // Add your custom color here
       },
     },
   },
   plugins: [],
 };
 export default config;
+
+
+
+
+
+
