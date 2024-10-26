@@ -1,0 +1,77 @@
+
+
+Yes, you can definitely use a background image instead of a background color in your LargeButton component. You just need to modify the bgColor prop to accept a CSS class for background images or directly set a style prop for more control. Here’s how to implement it:
+
+Option 1: Using a CSS Class
+If you have predefined classes for background images, you can continue using the bgColor prop. Just make sure the class applies a background image. For example:
+
+javascript
+Copy code
+import React from 'react';
+
+type TitleProps = {
+    name: string;
+    bgClass?: string; // Optional prop for background image class
+    height?: string; // Optional prop for height
+    width?: string; // Optional prop for width
+};
+
+export default function LargeButton({ name, bgClass = 'bg-red-600', height = 'h-14', width = 'w-48' }: TitleProps) {
+    return (
+        <button 
+            type="submit" 
+            className={`${bgClass} ${height} ${width} rounded-md text-white text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}
+        >
+            {name}
+        </button>
+    );
+}
+
+
+Usage Example
+You can use a background image class like this:
+
+jsx
+Copy code
+<LargeButton name="Submit" bgClass="bg-cover bg-center" style={{ backgroundImage: "url('/path/to/your/image.jpg')" }} />
+Option 2: Direct Style Prop
+Alternatively, if you want to directly apply a background image using inline styles, you can change your component to accept a style prop:
+
+javascript
+Copy code
+import React from 'react';
+
+type TitleProps = {
+    name: string;
+    style?: React.CSSProperties; // Optional prop for inline styles
+    height?: string; // Optional prop for height
+    width?: string; // Optional prop for width
+};
+
+export default function LargeButton({ name, style, height = 'h-14', width = 'w-48' }: TitleProps) {
+    return (
+        <button 
+            type="submit" 
+            className={`${height} ${width} rounded-md text-white text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}
+            style={style} // Apply the style prop here
+        >
+            {name}
+        </button>
+    );
+}
+Usage Example with Inline Styles
+You can use the button like this:
+
+jsx
+Copy code
+<LargeButton 
+    name="Submit" 
+    style={{ backgroundImage: "url('/path/to/your/image.jpg')", backgroundSize: 'cover' }} 
+    height="h-16" 
+    width="w-56" 
+/>
+This way, you have the flexibility to use either CSS classes or inline styles for background images, depending on your needs!
+
+
+
+

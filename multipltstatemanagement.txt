@@ -1,0 +1,51 @@
+
+
+one the home page i used toggle and toggle2 but can be done this way
+
+
+import React, { useState } from 'react';
+import { ChevronRight, ChevronLeft } from 'your-icon-library'; // Adjust the import based on your icon library
+
+const CollapsibleComponent = ({ title, items }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div>
+      <div onClick={handleToggle} className='flex space-x-10 cursor-pointer'>
+        <span>{title}</span>
+        {isOpen ? <ChevronLeft /> : <ChevronRight />}
+      </div>
+      {isOpen && (
+        <div className='pl-10 absolute left-48 bg-gray-50 space-y-4'>
+          <ul>
+            {items.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <div>
+      <CollapsibleComponent
+        title="Women's Fashion"
+        items={['Women cloth', 'Women watch', 'Women trousers', 'Women jeans']}
+      />
+      <CollapsibleComponent
+        title="Men's Fashion"
+        items={['Men shirt', 'Men watch', 'Men trousers', 'Men jeans']}
+      />
+      {/* Add more CollapsibleComponent as needed */}
+    </div>
+  );
+};
+
+export default App;

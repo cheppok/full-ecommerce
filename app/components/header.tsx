@@ -18,11 +18,11 @@ export default function Header() {
       </Link>
       <div>
         <ul className="flex justify-between w-80 font-semibold text-lg">
-          {['/cheppok', '/contact', '/about', '/signup'].map((path) => (
+          {['/', '/contact', '/about', '/signup'].map((path) => (
             <li key={path}>
               <Link href={path}
                      className={pathname === path ? 'currentPage' : ''}>
-                  {path === '/cheppok' ? 'Home' : path.charAt(1).toUpperCase() + path.slice(2)}
+                  {path === '/' ? 'Home' : path.charAt(1).toUpperCase() + path.slice(2)}
                 
               </Link>
             </li>
