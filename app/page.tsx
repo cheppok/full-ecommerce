@@ -39,8 +39,6 @@ export default function Home() {
     };
   
     
-
-    
   return (
     <div className=''>
         <section>
@@ -174,8 +172,6 @@ export default function Home() {
            </div>
                  
         </div>
-           
-
         <section className='flex justify-between ml-32 mt-6 space-x-8 w-[83vw] overflow-hidden'>
             <Card name='HAVIT HV-G92 GAMEPAD'  bgClass="bg-center bg-no-repeat bg-center" currentPrice='$200' rating='(87)' style={{ backgroundImage: "url('/images/GAMEPAD.png')" }}/> 
             <Card name='JAK-900 wired keyboard'  bgClass="bg-fit bg-no-repeat bg-center" currentPrice='$200' rating='(87)' style={{ backgroundImage: "url('/images/keyboard.png')" }}/> 
@@ -189,62 +185,19 @@ export default function Home() {
                 
         <SectionTitle name='categories'/>
         <SectionHeading title='Browse By Category'/>
-
         <section className='ml-32 mr-32'>
-        <div className='flex w-full pt-4 pb-10 relative justify-end'>
-          
-            <div className='flex space-x-1 absolute right-0 top-2'>
-                <Link href={''} className=' rounded-full bg-gray-200 h-8 w-8 flex justify-center items-center '>
-                <Image src={'/images/ArrowLt.png'} height={10} width={14} alt='arrow'/>
-                </Link>
-           
-                <Link href={''} className=' rounded-full bg-gray-200 h-8 w-8 flex justify-center items-center'>
-                <Image src={'/images/ArrowRt.png'} height={10} width={15} alt='arrow'/>
-                </Link>
-          </div>
-        </div>
-        <CategoryCardList/>
-
-        {/* <div className='flex space-x-6 border-b-2 border-gray-200 pb-16 w-11/12 overflow-hidden'>
-            <div className="flex flex-col justify-center items-center h-40 w-44 border-2 border-gray-200 ">
-                <Image src={'/images/Category-CellPhone.png'} width={50} height={10} alt=''/>
-                <h3>
-                    Phones
-                </h3>
-            </div>
-            <div className="flex flex-col justify-center items-center h-40 w-44 border-2 border-gray-200">
-                <Image src={'/images/Category-Computer.png'} width={50} height={10} alt=''/>
-                <h3>
-                    Computer
-                </h3>
-            </div>
-            <div className="flex flex-col justify-center items-center h-40 w-44 border-2 border-gray-200">
-                <Image src={'/images/Category-SmartWatch.png'} width={50} height={10} alt=''/>
-                <h3>
-                Smartwatch
-                </h3>
-            </div>
-            <div className="flex flex-col justify-center items-center  h-40 w-44 border-2 border-gray-200">
-                <Image src={'/images/Category-Camera.png'} width={50} height={10} alt=''/>
-                <h3>
-                Camera
-                </h3>
-            </div>
-            <div className="flex flex-col justify-center items-center  h-40 w-44 border-2 border-gray-200">
-                <Image src={'/images/Category-Gamepad.png'} width={50} height={10} alt=''/>
-                <h3>
-                Gaming
-                </h3>
-            </div>
-            <div className="flex flex-col justify-center items-center h-40 w-44 border-2 border-gray-200">
-                <Image src={'/images/Category-Headphone.png'} width={50} height={10} alt=''/>
-                <h3>
-                   Headphone
-                </h3>
-            </div>
-         
+          <div className='flex w-full pt-4 pb-10 relative justify-end'>
+          <div className='flex space-x-1 absolute right-0 top-2'>
+                  <Link href={''} className=' rounded-full bg-gray-200 h-8 w-8 flex justify-center items-center '>
+                  <Image src={'/images/ArrowLt.png'} height={10} width={14} alt='arrow'/>
+                  </Link>
             
-        </div> */}
+                  <Link href={''} className=' rounded-full bg-gray-200 h-8 w-8 flex justify-center items-center'>
+                  <Image src={'/images/ArrowRt.png'} height={10} width={15} alt='arrow'/>
+                  </Link>
+          </div>
+          </div>
+        <CategoryCardList/>
         </section>
 
         <SectionTitle name='This Month'/>
@@ -309,7 +262,7 @@ export default function Home() {
         </section>
         <div className='flex justify-center mt-10'>
             <LargeButton name='View All Products' bgColor='bg-red-500' width='w-48' height='h-12'/>
-         </div>
+        </div>
 
         <SectionTitle name='Featured'/>
         <SectionHeading title='New Arrival'/>
