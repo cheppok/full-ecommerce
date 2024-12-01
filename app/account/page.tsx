@@ -1,20 +1,19 @@
 "use client";
 
 import React from "react";
-import Header from "./components/header";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, ChevronDown } from "lucide-react";
-import SectionTitle from "./components/sectionTitle";
-import LargeButton from "./components/largeButton";
-import SectionHeading from "./components/sectionHeading";
-import Card from "./components/card";
-import CardLabel from "./components/cardLabel";
-import CardLabel2 from "./components/cardLabel2";
-import CategoryCardList from "./components/categoryCardList";
+import SectionTitle from "../components/sectionTitle";
+import LargeButton from "../components/largeButton";
+import SectionHeading from "../components/sectionHeading";
+import Card from "../components/card";
+import CardLabel from "../components/cardLabel";
+import CardLabel2 from "../components/cardLabel2";
+import CategoryCardList from "../components/categoryCardList";
 import { useState } from "react";
-import { CarouselPlugin } from "./components/homeCorousel";
-// import { Carousel2 } from "./components/homeCarousel2";
+import Header2 from "../components/header2";
 
 import {
 	Collapsible,
@@ -36,34 +35,13 @@ export default function Home() {
 	};
 
 	return (
-		<div>
-			<div className="flex items-center  ">
+		<div className="">
+			<section>
 				<div className="w-11/12">
-					<Header />
+					<Header2 />
 				</div>
-				<div className="flex h-6 space-x-8 absolute right-32 top-[76px] ">
-					<Link href={""}>
-						<Image
-							src={"/images/notification.jpg"}
-							alt=""
-							height={50}
-							width={25}
-							className="p-0.5"
-						/>
-					</Link>
-					<Link href={""}>
-						<Image
-							src={"/images/Cart1.jpg"}
-							alt=""
-							height={50}
-							width={25}
-						/>
-					</Link>
-				</div>
-			</div>
 
-			<section className="flex mr-32 ml-32">
-				<div className="flex justify-between mr-4 ">
+				<div className="flex justify-between mr-32 ml-32 ">
 					<div className=" w-[217px]  top-[182px] left-[135px] gap-[16px]  flex flex-col border-r-2 border-gray-300 ">
 						<Link href={""} className="pt-10">
 							<Collapsible>
@@ -119,8 +97,7 @@ export default function Home() {
 						<Link href={""}>Health & Beauty</Link>
 					</div>
 
-					{/* 
-					<div className="w-4/5 h-full top-[182px] mt-10">
+					<div className="w-4/5 h-full top-[182px] flex bg-black text-white mt-10">
 						<div className="text w-1/2 text-white flex flex-col pl-20 pt-16 space-y-2">
 							<div className="flex space-x-6 items-center pb-4">
 								<Image
@@ -149,7 +126,7 @@ export default function Home() {
 								/>
 							</div>
 						</div>
-						
+
 						<div className="image w-1/2 ">
 							<Image
 								src={"/images/camera-big.png"}
@@ -159,12 +136,7 @@ export default function Home() {
 								className="pt-6"
 							/>
 						</div>
-						
-					</div> */}
-				</div>
-				<div className="flex">
-					<CarouselPlugin />
-					{/* <Carousel2 /> */}
+					</div>
 				</div>
 			</section>
 
