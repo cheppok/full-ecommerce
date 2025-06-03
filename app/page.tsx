@@ -15,6 +15,8 @@ import CategoryCardList from "./components/categoryCardList";
 import { useState } from "react";
 import { CarouselPlugin } from "./components/homeCorousel";
 // import { Carousel2 } from "./components/homeCarousel2";
+// import FlashButton from "./components/flashButton";
+// import FlashCircle from "./components/flashCircle";
 
 import {
 	Collapsible,
@@ -36,10 +38,12 @@ export default function Home() {
 	};
 
 	return (
-		<div>
+		<div className=" dark:bg-black">
 			<div className="flex items-center  ">
 				<div className="w-11/12">
 					<Header />
+					{/* <FlashButton size="large" /> */}
+					{/* <FlashCircle /> */}
 				</div>
 				<div className="flex h-6 space-x-8 absolute right-32 top-[76px] ">
 					<Link href={""}>
@@ -48,7 +52,7 @@ export default function Home() {
 							alt=""
 							height={50}
 							width={25}
-							className="p-0.5"
+							className="p-0.5 dark:invert transition duration-300"
 						/>
 					</Link>
 					<Link href={""}>
@@ -57,6 +61,7 @@ export default function Home() {
 							alt=""
 							height={50}
 							width={25}
+							className="dark:invert transition duration-300"
 						/>
 					</Link>
 				</div>

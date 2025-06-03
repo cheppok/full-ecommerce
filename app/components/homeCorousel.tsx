@@ -13,7 +13,7 @@ import {
 
 const carouselItems = [
 	{
-		title: "Original beutiful cloth",
+		title: "Original beautiful cloth",
 		description: "Holiday sales",
 		image: "/images/cloth.png",
 	},

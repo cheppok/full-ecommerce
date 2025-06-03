@@ -10,9 +10,9 @@ const Contact: React.FC = () => {
 	const [phoneNumber, setPhoneNumber] = useState<string>("");
 
 	return (
-		<div>
+		<div className="  dark:bg-black ">
 			<Header2 />
-			<div className="h-44 ml-52 flex items-center">Contact</div>
+			<div className="h-44 ml-52 flex items-center ">Contact</div>
 			<main className="flex justify-center space-x-6">
 				<section className="contactSection1 flex flex-col border-4 border-slate-50">
 					<div className="border-b-2 border-gray-400">

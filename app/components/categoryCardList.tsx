@@ -20,7 +20,13 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ imageSrc, title }) => {
 	return (
 		<div className="flex flex-col justify-center items-center h-40 w-44 border-2 rounded-md border-gray-200 transition duration-300 ease-in-out hover:bg-red-500 hover">
 			<Link href={"#"}>
-				<Image src={imageSrc} width={50} height={50} alt={title} />
+				<Image
+					src={imageSrc}
+					width={50}
+					height={50}
+					alt={title}
+					className="dark:invert transition duration-300"
+				/>
 				<h3 className="mt-2 text-center">{title}</h3>
 			</Link>
 		</div>

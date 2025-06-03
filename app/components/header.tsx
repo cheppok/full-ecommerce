@@ -4,17 +4,19 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import ModeToggle from "./darkmode/themeSwitcher";
 
 export default function Header() {
 	const pathname = usePathname();
 
 	return (
-		<div className="nav-container flex justify-around items-end pt-6 border-b-2 pb-6">
+		<div className="nav-container flex justify-around items-end pt-6 border-b-2 pb-6 relative">
 			<Link href="/#" className="navbar-brand mr-12 text-2xl font-bold">
 				Cheppok
 			</Link>
+
 			<div>
-				<ul className="flex justify-between w-80 font-semibold text-lg">
+				<ul className="flex justify-between w-80 font-semibold text-lg ">
 					{["/", "/contact", "/about", "/signup", "/login"].map(
 						(path) => (
 							<li key={path}>
@@ -35,14 +37,16 @@ export default function Header() {
 				</ul>
 			</div>
 
+			<ModeToggle className="absolute right-1/4" />
+
 			<form
-				className="nav-form relative bg-slate-50 text-dark"
+				className="nav-form relative bg-slate-50 text-dark dark:bg-black"
 				role="search"
 			>
 				<input
 					type="text"
 					placeholder="what are you looking for?"
-					className="mr-10 ml-2 p-2 text-xs bg-slate-50 text-dark"
+					className="mr-10 ml-2 p-2 text-xs bg-slate-50 rounded-xl dark:bg-black  "
 				/>
 				<button className="btn absolute right-1 top-2" type="submit">
 					<Image
@@ -50,6 +54,7 @@ export default function Header() {
 						height={15}
 						width={15}
 						alt="search"
+						className=" dark:invert transition duration-300"
 					/>
 				</button>
 			</form>
@@ -60,6 +65,7 @@ export default function Header() {
 // import React from 'react';
 // import Link from 'next/link';
 // import Image from 'next/image';
+
 // import { useRouter } from 'next/router';
 
 // export default function Header() {

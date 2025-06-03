@@ -22,6 +22,7 @@ function ToggleImage() {
 			alt="User"
 			onClick={toggleImage}
 			style={{ cursor: "pointer" }}
+			className="dark:invert cursor-pointer"
 		/>
 	);
 }

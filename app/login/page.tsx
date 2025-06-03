@@ -17,7 +17,7 @@ function redirectToAccountPage() {
 
 export default function Login() {
 	return (
-		<div className="loginPage  ">
+		<div className="loginPage  dark:bg-black ">
 			<Header />
 			<main className=" loginMain flex  ">
 				<div className="loginImage relative ">

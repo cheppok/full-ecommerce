@@ -5,7 +5,7 @@ import Header from "../components/header";
 
 export default function Signup() {
 	return (
-		<div>
+		<div className=" dark:bg-black">
 			<Header />
 			<main className=" loginMain flex  ">
 				<div className="loginImage relative ">

@@ -6,7 +6,7 @@ import AboutCardList from "../components/aboutCardList";
 
 export default function About() {
 	return (
-		<div className=" ml-32">
+		<div className=" pl-32 dark:bg-black">
 			<Header />
 
 			<div className="flex space-x-1 mt-16">

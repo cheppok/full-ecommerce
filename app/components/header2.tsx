@@ -32,7 +32,7 @@ export default function Header2() {
 							alt=""
 							height={50}
 							width={25}
-							className="p-0.5"
+							className="p-0.5 dark:invert transition duration-300"
 						/>
 					</Link>
 					<Link href={""}>
@@ -41,6 +41,7 @@ export default function Header2() {
 							alt=""
 							height={50}
 							width={25}
+							className="dark:invert transition duration-300"
 						/>
 					</Link>
 					<Link href={""}>
@@ -69,7 +70,7 @@ export default function Header2() {
 											width={20}
 											height={15}
 											alt="img"
-											className="text-white"
+											className="text-white "
 										/>
 										<span> Manage my account</span>
 									</li>

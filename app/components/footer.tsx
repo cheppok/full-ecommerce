@@ -1,16 +1,21 @@
 import React from "react";
 import Image from "next/image";
 
-export default function Footer() {
+interface FooterProps {
+	style?: React.CSSProperties; // For inline styling
+	className?: string; // For CSS class names
+}
+
+const Footer: React.FC<FooterProps> = ({ style, className }) => {
 	return (
-		<footer className="footer dark:bg-gray-900 mt-36">
+		<footer className={`footer dark:bg-red-800 ${className}`} style={style}>
 			<div className="mx-auto w-full max-w-screen-xl">
 				<div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-5">
 					<div>
-						<h2 className="mb-6 text-sm text-gray-200 font-semibold  uppercase dark:text-white">
+						<h2 className="mb-6 text-sm text-gray-200 font-semibold  uppercase ">
 							cheppok
 						</h2>
-						<ul className="text-gray-200 dark:text-gray-400 font-medium">
+						<ul className="text-gray-200 dark:text-gray-200 font-medium">
 							<li className="mb-4">
 								<a href="#" className=" hover:underline">
 									Subscribe
@@ -46,12 +51,12 @@ export default function Footer() {
 					</div>
 
 					<div>
-						<h2 className="mb-6 text-sm font-semibold text-gray-200 uppercase dark:text-white">
+						<h2 className="mb-6 text-sm font-semibold text-gray-200 uppercase ">
 							support
 						</h2>
-						<ul className="text-gray-200 dark:text-gray-400 font-medium">
+						<ul className="text-gray-200   font-medium">
 							<li className="mb-4">
-								<p>222 NSummit road, Asaba</p>
+								<p>222 Summit road, Asaba</p>
 								<p>Delta state, Nigeria</p>
 							</li>
 							<li className="mb-4">
@@ -67,10 +72,10 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div>
-						<h2 className="mb-6 text-sm font-semibold text-gray-200 uppercase dark:text-white">
+						<h2 className="mb-6 text-sm font-semibold text-gray-200 uppercase ">
 							account
 						</h2>
-						<ul className="text-gray-200 dark:text-gray-400 font-medium">
+						<ul className="text-gray-200  font-medium">
 							<li className="mb-4">
 								<a href="#" className="hover:underline">
 									Login/Register
@@ -94,10 +99,10 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div>
-						<h2 className="mb-6 text-sm font-semibold text-gray-200 uppercase dark:text-white">
+						<h2 className="mb-6 text-sm font-semibold text-gray-200 uppercase ">
 							quicklink
 						</h2>
-						<ul className="text-gray-200 dark:text-gray-400 font-medium">
+						<ul className="text-gray-200 font-medium">
 							<li className="mb-4">
 								<a href="#" className="hover:underline">
 									Privacy Policy
@@ -116,10 +121,10 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div>
-						<h2 className="mb-6 text-sm font-semibold text-gray-200 uppercase dark:text-white">
+						<h2 className="mb-6 text-sm font-semibold text-gray-200 uppercase ">
 							Download
 						</h2>
-						<ul className="text-gray-200 dark:text-gray-400 font-medium">
+						<ul className="text-gray-200 font-medium">
 							<li className="mb-4">
 								<a href="#" className="hover:underline">
 									iOS
@@ -253,4 +258,5 @@ export default function Footer() {
 			</div>
 		</footer>
 	);
-}
+};
+export default Footer;

@@ -7,10 +7,6 @@ body {
 	background: #ffffff;
 }
 
-input:focus {
-	outline: none;
-}
-
 .loginPage {
 	/* width: 1440px; */
 	/* height: 1561px; */
@@ -212,3 +208,154 @@ border: 1.5px solid #FAFAFA
 		@apply bg-background text-foreground;
 	}
 }
+
+@keyframes scroll {
+	0% {
+		transform: translateX(50%);
+	}
+	100% {
+		transform: translateX(-40%);
+	}
+}
+
+.animate-scroll {
+	/* display: inline-block; */
+	animation: scroll 30s linear infinite;
+}
+.animate-scroll:hover {
+	animation-play-state: paused;
+}
+/* 
+@keyframes welcome {
+	0% {
+		transform: translateX(100%);
+	}
+	50% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateX(-40%);
+	}
+}
+
+.animate-welcome {
+	display: inline-block;
+	animation: scroll 10s linear infinite;
+}
+.animate-welcome:hover {
+	animation-play-state: paused;
+} */
+.center {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.outer {
+	position: relative;
+	margin: 0 50px;
+	background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+}
+.button {
+	height: 70px;
+	width: 220px;
+	border-radius: 50px;
+}
+.button-small button {
+	height: 1rem;
+	width: 3rem;
+	border-radius: 50px;
+}
+
+.button-medium button {
+	height: 2rem;
+	width: 6rem;
+	border-radius: 50px;
+}
+
+.button-large button {
+	height: 4rem;
+	width: 12rem;
+	border-radius: 50px;
+}
+.circle {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+}
+.outer button,
+.outer span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.outer button {
+	background: #111;
+	color: #f2f2f2;
+	outline: none;
+	border: none;
+	font-size: 20px;
+	z-index: 9;
+	letter-spacing: 1px;
+	text-decoration: uppercase;
+	cursor: pointer;
+}
+/* .button button {
+	height: 60px;
+	width: 210px;
+	border-radius: 50px;
+} */
+.circle button {
+	height: 180px;
+	width: 180px;
+	border-radius: 50%;
+}
+.outer span {
+	height: 100%;
+	width: 100%;
+	background: inherit;
+}
+.button span {
+	border-radius: 50px;
+}
+.circle span {
+	border-radius: 50%;
+}
+.outer:hover span:nth-child(1) {
+	filter: blur(7px);
+}
+.outer:hover span:nth-child(2) {
+	filter: blur(14px);
+}
+
+.outer:hover {
+	animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+	0% {
+		filter: hue-rotate(0deg);
+	}
+	100% {
+		filter: hue-rotate(360deg);
+	}
+}
+
+@keyframes flash {
+	0% {
+	  opacity: 1;
+	}
+	50% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  
+  .welcome {
+	animation: flash 1s infinite;
+  }
+  
