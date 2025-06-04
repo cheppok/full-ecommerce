@@ -5,6 +5,14 @@ import TopHeader from "./components/topHeader";
 // import Header from './components/header';
 import Footer from "./components/footer";
 import { ThemeProvider } from "./components/darkmode/themeProvider";
+import {
+	ClerkProvider,
+	SignInButton,
+	SignUpButton,
+	SignedIn,
+	SignedOut,
+	UserButton,
+} from "@clerk/nextjs";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -28,22 +36,31 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<ThemeProvider
-				attribute="class"
-				defaultTheme="system"
-				enableSystem
-				disableTransitionOnChange
-			>
-				<body
-					className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+		<ClerkProvider>
+			<html lang="en">
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
 				>
-					<TopHeader />
+					<body
+						className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+					>
+						<SignedOut>
+							<SignInButton />
+							<SignUpButton />
+						</SignedOut>
+						<SignedIn>
+							<UserButton />
+						</SignedIn>
+						<TopHeader />
 
-					{children}
-					<Footer className="mt-36" />
-				</body>
-			</ThemeProvider>
-		</html>
+						{children}
+						<Footer className="mt-36" />
+					</body>
+				</ThemeProvider>
+			</html>
+		</ClerkProvider>
 	);
 }
